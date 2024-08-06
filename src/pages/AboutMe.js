@@ -165,7 +165,7 @@ const AboutMe = () => {
 
       <footer>
         <div class="inner">
-          <p class="copyright">Copyright &copy; UI DEVELOP 1 TEAM. All Rights Reserved</p>
+          <p class="copyright">Copyright &copy; KIMJISOO PORTFOLIO. All Rights Reserved</p>
         </div>
       </footer>
     </div>
