@@ -8,12 +8,27 @@ const AboutMe = () => {
   // ApexChart state
   const [chartState, setChartState] = useState({
     series: [{
-      data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+      data: [90, 90, 40, 70, 70, 60, 40, 40, 50, 70]
     }],
     options: {
       chart: {
         type: 'bar',
-        height: 350
+        height: 350,
+        toolbar: {
+          show: false // 툴바 비활성화
+        },
+        animations: {
+          enabled: true,
+          easing: 'easeinout',
+          speed: 1500, // 애니메이션 속도를 밀리초 단위로 설정
+          animateGradually: {
+            enabled: true,
+            delay: 150 // 각 막대의 애니메이션 딜레이 설정
+          },
+          dynamicAnimation: {
+            speed: 350 // 동적 애니메이션 속도 설정
+          }
+        }
       },
       plotOptions: {
         bar: {
@@ -21,16 +36,51 @@ const AboutMe = () => {
           horizontal: true,
         }
       },
+      colors: '#1e9aff',
       dataLabels: {
-        enabled: false
+        enabled: true,
+        style: {
+          fontSize: '14px',
+          // colors: ['#000'] // 데이터 레이블의 색상
+        },
+        formatter: (value) => `${value}%`, // 데이터 레이블에 % 추가
+      },
+      tooltip: {
+        enabled: false, // 툴팁 비활성화
       },
       xaxis: {
-        categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan',
-          'United States', 'China', 'Germany'
-        ],
+        categories: ['HTML5', 'CSS3', 'Sass', 'Javascript', 'jQuery', 'React', 'Node.js', 'Python', 'MySql', 'Github'],
+        labels: {
+          show: false, // x축의 숫자 레이블 숨기기
+        },
+        axisBorder: {
+          show: false, // x축의 경계선 숨기기
+        },
+        axisTicks: {
+          show: false, // x축의 눈금 숨기기
+        },
+        title: {
+          style: {
+            fontSize: '16px',
+            color: '#666' // x축 제목의 색상
+          }
+        }
+      },
+      yaxis: {
+        max: 100, // y축의 최대값 설정
+        labels: {
+          style: {
+            fontSize: '18px',
+            colors: ['#333'] // y축 레이블의 색상
+          }
+        },
       }
     }
   });
+
+
+  
+  
 
   return (
     <div className="aboutme">
@@ -106,8 +156,8 @@ const AboutMe = () => {
             <h3 className="title">Skills</h3>
           </div>
           <div className="cont-area">
-            <div id="chart">
-              <ReactApexChart options={chartState.options} series={chartState.series} type="bar" height={350} />
+            <div>
+              <ReactApexChart options={chartState.options} series={chartState.series} type="bar" height={600} />
             </div>
           </div>
         </div>

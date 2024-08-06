@@ -187,7 +187,7 @@ body { background: #fff; position: relative; }
 .profile .cont-wrap .left .pic {min-width: 380px; height: 380px; object-fit: cover; background: url("../public/kimjisoo.png") no-repeat center / cover; border-radius: 50%; }
 .profile .cont-wrap .right {margin-left: 80px; padding-top: 40px;}
 .profile .cont-wrap .right h4 {position: relative; margin-bottom: 14px; padding-bottom: 14px; font-size: 22px;}
-.profile .cont-wrap .right h4::after { content: ""; display: block; position: absolute; bottom: 0; left: 0px; width: 30px; height: 1px; background: rgb(73, 176, 180); }
+.profile .cont-wrap .right h4::after { content: ""; display: block; position: absolute; bottom: 0; left: 0px; width: 30px; height: 1px; background:#1e9aff; }
 
 .profile .cont-wrap .right p{font-size: 16px; font-family: 'Noto Sans KR', sans-serif; margin-bottom: 18px;}
 .profile .cont-wrap .right p span {margin-right: 12px; font-weight: 700;}
@@ -207,7 +207,9 @@ body { background: #fff; position: relative; }
 
 .skills {padding: 140px 0; background-color: #fff;}
 .skills .title {font-size: 40px; text-align: center;}
-
+.apexcharts-datalabels {
+  position: absolute !important; right: 0 !important; transform: translateX(10px);
+}
 
 
 
