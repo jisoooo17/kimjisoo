@@ -8,7 +8,7 @@ const AboutMe = () => {
   // ApexChart state
   const [chartState, setChartState] = useState({
     series: [{
-      data: [90, 90, 40, 70, 70, 60, 40, 40, 50, 70]
+      data: [90, 90, 40, 60, 70, 60, 40, 40, 50, 70]
     }],
     options: {
       chart: {
@@ -153,7 +153,7 @@ const AboutMe = () => {
       <section className="skills">
         <div className="inner">
           <div className="txt-area">
-            <h3 className="title">Skills</h3>
+            <h3 className="title">SKILLS</h3>
           </div>
           <div className="cont-area">
             <div>
@@ -162,6 +162,12 @@ const AboutMe = () => {
           </div>
         </div>
       </section>
+
+      <footer>
+        <div class="inner">
+          <p class="copyright">Copyright &copy; UI DEVELOP 1 TEAM. All Rights Reserved</p>
+        </div>
+      </footer>
     </div>
   );
 };
