@@ -178,6 +178,14 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 /* -------------- project -------------- */
 .projects-w {position: relative;}
 .project {padding: 140px 0; }
+.project .title-box {text-align: center;}
+.project .title-box .title {margin-bottom: 80px; font-size: 42px;}
+
+
+.project .box-w {position: relative; padding: 60px 20px; box-shadow: 0 4px 16px 2px #00000010, 0 10px 15px 1px #19000000; }
+.project .box-w .txt-area {margin-bottom: 60px; text-align: center;}
+.project .box-w .txt-area .tit {font-size: 28px;}
+.project .box-w .txt-area .sub-tit {margin-top: 12px; font-size: 16px; color: #777;}
 .project .cont-area {display: flex; }
 .project .cont-area .left .swiper {position: relative; padding-bottom: 60px; width: 400px; height: 570px;}
 .project .swiper .img-w {height: 100%; text-align: center;}
