@@ -48,8 +48,6 @@ const Projects = () => {
                     pagination={{
                       clickable: false,
                     }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
                   >
                   <SwiperSlide>
                     <div className="img-w">
@@ -133,11 +131,52 @@ const Projects = () => {
               <ul className="accordion">
                 <li className={activeIndex === 0 ? 'on' : ''}>
                   <button className="question" onClick={() => handleAccordionClick(0)}>
-                    <p className="tit"> ▶ 시연 영상</p>
+                    <p className="tit"> ▶ &nbsp;시연 영상</p>
                     <span></span>
                   </button>
                   <div className="answer">
-                    <p className="txt"></p>
+                    <div className="video-w">
+                      <p className="video-txt">
+                        게시판 CRUD
+                      </p>
+                      <iframe 
+                        width="100%" 
+                        height="auto" 
+                        src="https://www.youtube.com/embed/VvIPCfftxLM" 
+                        title="YouTube video player" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen 
+                      ></iframe>
+                    </div>
+                    <div className="video-w">
+                      <p className="video-txt">
+                      탄소발자국 계산기 기능
+                      </p>
+                      <iframe 
+                        width="100%" 
+                        height="auto" 
+                        src="https://www.youtube.com/embed/bnRxcdAx958" 
+                        title="YouTube video player" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen 
+                      ></iframe>
+                    </div>
+                    <div className="video-w">
+                      <p className="video-txt">
+                        회원가입 및 로그인 기능
+                      </p>
+                      <iframe 
+                        width="100%" 
+                        height="auto" 
+                        src="https://www.youtube.com/embed/piaYBZiUBHQ" 
+                        title="YouTube video player" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen 
+                      ></iframe>
+                    </div>
                   </div>
                 </li>
               </ul>
