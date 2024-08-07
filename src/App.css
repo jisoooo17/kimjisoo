@@ -109,7 +109,7 @@ header .inner h2 { font: 20px/1 "Raleway"; color: #000; position: absolute; bott
 footer{padding:50px 0; border-top:1px solid #eee;}
 footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-size: 12px;}
 
-
+/* -------------- intro -------------- */
 .welcome-area{position:fixed; top:0; left:0; width:100%; height:100vh; background:#fff; z-index:5;}
 .content-area .img-w .img {position: absolute; top: 0; left: 0; width: 100%; height: 100vh; transform: scale(1.3); transition: transform 1s;}
 .content-area .img-w .img.active {transform: scale(1);}
@@ -138,7 +138,7 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 .content-area .img-w img {width: 100%; height: 100%; object-fit: cover;}
 
 
-
+/* -------------- about me -------------- */
 .aboutme-w {background-color: #f1f1f1;}
 .profile { position: relative;width: 100%; min-height: 100vh; z-index: 2; overflow: auto; }
 .profile .inner {margin: 0px auto; padding: 180px 0px; }
@@ -175,6 +175,9 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
   position: absolute !important; right: 0 !important; transform: translateX(10px);
 }
 
+/* -------------- project -------------- */
+.projects-w {position: relative;}
+.project {padding: 140px 0; }
 
 
 
