@@ -18,26 +18,67 @@ const Projects = () => {
       <Header/>
 
       <section className="project">
-        .tit-area
         <div className="inner">
           <div className="tit-area">
             
           </div>
           <div className="cont-area">
-          <Swiper
-              // install Swiper modules
-              modules={[Navigation, Pagination, Scrollbar]}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log('slide change')}
-            >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-          </Swiper>
+            <div className="left">
+              <Swiper
+                  // install Swiper modules
+                  modules={[Navigation, Pagination, Scrollbar]}
+                  slidesPerView={1}
+                  navigation
+                  onSwiper={(swiper) => console.log(swiper)}
+                  onSlideChange={() => console.log('slide change')}
+                >
+                <SwiperSlide>
+                  <div className="img-w">
+                    <img src={process.env.PUBLIC_URL + 'img/main-entire-page.png'} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="img-w">
+                    <img src={process.env.PUBLIC_URL + 'img/campaign-list.png'} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="img-w">
+                    <img src={process.env.PUBLIC_URL + 'img/campaign-detail.png'} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="img-w">
+                    <img src={process.env.PUBLIC_URL + 'img/campaign-write.png'} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="img-w">
+                    <img src={process.env.PUBLIC_URL + 'img/campaign-edit.png'} alt="" />
+                  </div>
+                </SwiperSlide>
+                
+                <SwiperSlide>
+                  <div className="img-w">
+                    <img src={process.env.PUBLIC_URL + 'img/carbon.png'} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="img-w">
+                    <img src={process.env.PUBLIC_URL + 'img/carbon-result.png'} alt="" />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="img-w">
+                    <img src={process.env.PUBLIC_URL + 'img/login-personal.png'} alt="" />
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+
+            <div className="right">
+
+            </div>
           </div>
         </div>
       </section>
