@@ -94,7 +94,6 @@ const Projects = () => {
                   <p className="txt">프론트엔드와 백엔드 작업에 모두 참여했습니다. 프론트엔드 개발에서는 React를 기반으로 작업했으며, 컴포넌트 기반 아키텍처를 통해 사용자 인터페이스를 설계하고 구현했습니다. 백엔드 개발에서는 Node.js를 사용하여 RESTful API와 서버 측 로직의 일부 기능을 개발하였습니다. 또한, MySQL을 활용하여 데이터베이스 설계와 서버의 원격 데이터 처리를 수행하여 데이터를 전송 및 관리했습니다.</p>
 
                 </div>
-
                 <div className="detail-w">
                   <div className="flex-txt">
                     <span className="label">주요 기능</span>
@@ -181,6 +180,64 @@ const Projects = () => {
                 </li>
               </ul>
             </div>
+          </div>
+
+          <div className="box-w shop">
+            <div className="txt-area">
+              <p className="tit">Shoe Shop</p>
+              <p className="sub-tit">1인 프로젝트</p>
+            </div>
+            <div className="cont-area">
+              <div className="left">
+                <Swiper
+                    // install Swiper modules
+                    modules={[Navigation, Pagination, Scrollbar]}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{
+                      clickable: false,
+                    }}
+                  >
+                  <SwiperSlide>
+                    <div className="img-w">
+                      <img src={process.env.PUBLIC_URL + 'img/shop-main.png'} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="img-w">
+                      <img src={process.env.PUBLIC_URL + 'img/shop-detail.png'} alt="" />
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="img-w">
+                      <img src={process.env.PUBLIC_URL + 'img/shop-cart.png'} alt="" />
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+
+              <div className="right">
+                <div className="txt-w">
+                  <p className="txt">코딩애플의 리액트 강의를 클론코딩한 결과물입니다.</p>
+                  <p className="txt"> 이 프로젝트를 통해 컴포넌트, props, state를 학습하여 리액트의 기초 문법을 정확히 숙지했습니다. Redux와 Context API를 통해 state를 효과적으로 관리하며, 서버와의 통신은 Ajax를 활용했습니다. 또한, Styled Components, Bootstrap과 같은 외부 라이브러리와 JavaScript ES6 문법들을 활용하여 개발을 진행했습니다.</p>
+                </div>
+                <div className="detail-w">
+                  <div className="flex-txt">
+                    <span className="label">주요 기능</span>
+                    <p className="desc">Localstorage를 활용한 장바구니, 탭 UI</p>
+                  </div>
+                  <div className="flex-txt">
+                    <span className="label">Frontend</span>
+                    <p className="desc">React, Redux, Javascript, Bootstrap</p>
+                  </div>
+                  <div className="flex-txt">
+                    <span className="label">Github</span>
+                    <p className="desc"><a href="https://github.com/jisoooo17/shop_clone">github.com/jisoooo17/shop_clone</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>

@@ -105,7 +105,7 @@ header .inner {margin: 0px auto;}
 header .inner button { font: 25px/1 "Raleway"; color: #000; position: absolute; bottom: 15px; left: 2vw; }
 header .inner h2 { font: 20px/1 "Raleway"; color: #000; position: absolute; bottom: 15px; right: 2vw; }
 
-footer{padding:50px 0; border-top:1px solid #eee;}
+footer{padding:20px 0; border-top:1px solid #eee;}
 footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-size: 12px;}
 
 /* -------------- intro -------------- */
@@ -182,11 +182,15 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 
 
 .project .box-w {position: relative; padding: 60px 20px; box-shadow: 0 4px 16px 2px #00000010, 0 10px 15px 1px #19000000; }
+
+
+.project .box-w + .box-w {margin-top: 60px;}
 .project .box-w .txt-area {margin-bottom: 60px; text-align: center;}
 .project .box-w .txt-area .tit {font-size: 28px;}
 .project .box-w .txt-area .sub-tit {margin-top: 12px; font-size: 16px; color: #777;}
 .project .cont-area {display: flex; }
 .project .cont-area .left .swiper {position: relative; padding-bottom: 60px; width: 400px; height: 570px;}
+
 .project .swiper .img-w {height: 100%; text-align: center;}
 .project .swiper img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; object-fit: cover;}
 .project .swiper .swiper-button-prev, .project .swiper .swiper-button-next {top: auto; bottom: 0; color: #000; z-index: 2;}
@@ -195,6 +199,10 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 .project .swiper .swiper-button-prev:after, .project .swiper .swiper-button-next:after {font-size: 20px;}
 .project .swiper .swiper-pagination {bottom: 9px; z-index: 1;}
 .project .swiper .swiper-pagination-bullet-active {background-color: #000;}
+
+.project .box-w.shop .swiper {height: 400px;}
+.project .box-w.shop .swiper img {width: 100%; height: auto;}
+
 .project .right {padding: 0 20px;}
 .project .right .txt-w .txt {font-size: 16px;}
 .project .right .txt-w .txt.emph {font-size: 18px;}
