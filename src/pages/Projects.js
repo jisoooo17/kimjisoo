@@ -29,6 +29,9 @@ const Projects = () => {
                   modules={[Navigation, Pagination, Scrollbar]}
                   slidesPerView={1}
                   navigation
+                  pagination={{
+                    clickable: false,
+                  }}
                   onSwiper={(swiper) => console.log(swiper)}
                   onSlideChange={() => console.log('slide change')}
                 >
@@ -57,7 +60,6 @@ const Projects = () => {
                     <img src={process.env.PUBLIC_URL + 'img/campaign-edit.png'} alt="" />
                   </div>
                 </SwiperSlide>
-                
                 <SwiperSlide>
                   <div className="img-w">
                     <img src={process.env.PUBLIC_URL + 'img/carbon.png'} alt="" />
@@ -65,12 +67,7 @@ const Projects = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="img-w">
-                    <img src={process.env.PUBLIC_URL + 'img/carbon-result.png'} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="img-w">
-                    <img src={process.env.PUBLIC_URL + 'img/login-personal.png'} alt="" />
+                    <img src={process.env.PUBLIC_URL + 'img/carbon-footprint.png'} alt="" />
                   </div>
                 </SwiperSlide>
               </Swiper>
