@@ -94,7 +94,7 @@ const App = () => {
 
   return (
     <div id="wrap" ref={bodyRef}>
-      <div className="welcome_area" ref={welcomeAreaRef}>
+      <div className="welcome-area" ref={welcomeAreaRef}>
         <div className="lottie">
           <Player
             autoplay

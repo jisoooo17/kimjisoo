@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ReactApexChart from 'react-apexcharts';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const AboutMe = () => {
   let navigate = useNavigate();
@@ -78,18 +80,9 @@ const AboutMe = () => {
     }
   });
 
-
-  
-  
-
   return (
-    <div className="aboutme">
-      <header id="header">
-        <div className="inner">
-          <button onClick={() => { navigate("/") }}>PORTFOLIO</button>
-          <h2>ABOUT ME</h2>
-        </div>
-      </header>
+    <div className="aboutme-w">
+      <Header/>
 
       <section className="profile">
         <div className="inner">
@@ -163,11 +156,7 @@ const AboutMe = () => {
         </div>
       </section>
 
-      <footer>
-        <div class="inner">
-          <p class="copyright">Copyright &copy; KIMJISOO PORTFOLIO. All Rights Reserved</p>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 };

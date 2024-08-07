@@ -16,7 +16,7 @@ const Intro = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      const welcomeArea = document.querySelector('.welcome_area');
+      const welcomeArea = document.querySelector('.welcome-area');
       const titArea = document.querySelector('.tit_area');
       const imgWrap = document.querySelector('.img_wrap');
   
@@ -35,19 +35,19 @@ const Intro = () => {
   }, []);
   
   return (
-    <div className='intro'>
-      <div className="welcome_area">
+    <div className='intro-w'>
+      <div className="welcome-area">
         <Lottie animationData={welcome} autoplay style={{ height: '700px', width: '700px',position:"absolute", top:"50%", left:"50%", zIndex:1, transform:"translate(-50%, -50%)"}}  lottieRef={lottieRef} />
       </div>
 
-      <div className="module_content">
-      <div className="tit_area">
-        <p className="tit"><span>신입 프론트엔드 개발자 김지수입니다.</span></p>
-        <div className="made">
-          <button type="button" onClick={()=>{navigate("/aboutme")}}><span>ABOUT ME</span></button>
-          <button type="button" onClick={()=>{navigate("/projects")}}><span>PROJECTS</span></button>
-        </div>      
-      </div>
+      <div className="cont-area">
+        <div className="tit_area">
+          <p className="tit"><span>신입 프론트엔드 개발자 김지수입니다.</span></p>
+          <div className="made">
+            <button type="button" onClick={()=>{navigate("/aboutme")}}><span>ABOUT ME</span></button>
+            <button type="button" onClick={()=>{navigate("/projects")}}><span>PROJECTS</span></button>
+          </div>      
+        </div>
         <div className="img_area">
           <div className="img_wrap scroll_motion">
             <img src={process.env.PUBLIC_URL + 'img-project.jpg'} alt="" />
