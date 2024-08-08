@@ -94,6 +94,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   font-weight: normal;
   src: url("./fonts/Roboto-Light.ttf");
 }
+@font-face {
+  font-family: "Caveat";
+  font-weight: normal;
+  src: url("./fonts/Caveat-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "IBMPlexSansKR";
+  font-weight: normal;
+  src: url("./fonts/IBMPlexSansKR-Medium.ttf");
+}
+@font-face {
+  font-family: "IBMPlexSansKRLight";
+  font-weight: normal;
+  src: url("./fonts/IBMPlexSansKR-Light.ttf");
+}
 
 
 .App{position:relative; width:100%; overflow:hidden;}
@@ -104,17 +119,17 @@ header {position: fixed; left: 0; top: 0; width: 100%; height: 62px; background:
 
 
 header.hide {top: -62px;}
-header h1 {position: absolute; bottom: 12px; left: 40px; }
-header h1 button {font-size: 24px; color: #000; }
+header h1 {position: absolute; bottom: 10px; left: 40px;}
+header h1 button span {font-family: "Caveat"; font-size: 32px;}
 header .utils {display: flex; position: absolute; bottom: 14px; right: 40px; }
 header .utils button:last-child {margin-left: 22px;}
-header .utils button span{position:relative; font-size: 15px; font-weight: 100;}
+header .utils button span{position:relative; font-size: 15px; font-weight: 100; font-family: "IBMPlexSansKRLight";}
 header .utils button span:after{display:block; content:""; position:absolute; bottom:0; left:0; transform:skew(-25deg); width:0; height:50%; background:#1e9aff; opacity:0.1; transition:width 0.4s ease; z-index:-1;}
 header .utils button span:hover:after {width: 100%;}
 
 
 footer{padding:20px 0; border-top:1px solid #eee; background-color: #fff;}
-footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-size: 12px;}
+footer .inner .copyright{color:#777; font-weight:500; text-align: center; font-size: 12px;}
 
 .btn-area {padding: 0 0 110px; text-align: center;}
 .btn-area .btn-goto {padding: 12px 22px; border: 1px solid #d8d8d8; background-color: #fff; color: #777; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
@@ -130,16 +145,16 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 #wrap{overflow:hidden; position:relative; width:100%; color:#222;}
 .stop_scroll{overflow:hidden; height:100%; min-height:100%; touch-action: none;}
 .welcome-area{position:fixed; top:0; left:0; width:100%; height:100vh; background:#fff; z-index:5;}
-.content-area {position: relative; min-height: 100vh;}
+.content-area {position: relative; min-height: 100vh;  font-weight: 100;}
 /* .content-area .inner {margin: 0 auto; padding: 120vh 0 240px; width: 1460px;} */
 .content-area .inner {position:relative; margin: 0 auto; padding: 180px 0 240px; width: 1460px; z-index:1; }
 .content-area .tit-w {position: relative; z-index: 2; padding: 180px 0 100px; font-size: 40px; text-align: center; background: #fff;}
-.content-area .tit-w .tit {position: relative; top: 80px; opacity: 0; /*font-size:120px; */ font-weight: 800; letter-spacing: -4px; transition: top 1s ease, opacity 1s ease;}
-.content-area .tit-w .tit span {position:relative}
+.content-area .tit-w .tit {position: relative; top: 80px; opacity: 0; /*font-size:120px; */ letter-spacing: -4px; transition: top 1s ease, opacity 1s ease;}
+.content-area .tit-w .tit span {position:relative; font-size: 36px; font-family: "IBMPlexSansKR";}
 .content-area .tit-w .tit span:after{display:block; content:""; position:absolute; bottom:0; left:0; transform:skew(-25deg); width:0; height:50%; background:#1e9aff; opacity:0.1; transition:width 0.4s ease; z-index:-1;}
 .content-area .tit-w .made {position: relative; top: 80px; margin-top: 120px; opacity: 0; font-size:16px; font-weight: 600; transition: top 1s ease, opacity 1s ease;}
 .content-area .tit-w .made button:last-child {margin-left: 40px;}
-.content-area .tit-w .made span{position:relative; font-size: 20px; font-weight: 100;}
+.content-area .tit-w .made span{position:relative; font-size: 20px; font-family: "IBMPlexSansKRLight";}
 .content-area .tit-w .made span:after{display:block; content:""; position:absolute; bottom:0; left:0; transform:skew(-25deg); width:0; height:50%; background:#1e9aff; opacity:0.1; transition:width 0.4s ease; z-index:-1;}
 .content-area .tit-w .made span:hover:after {width: 100%;}
 .content-area .tit-w.active .tit {top: 0; opacity: 1; transition-delay: .1s;}
@@ -161,16 +176,17 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 .profile .txt-area {text-align: center;}
 .profile .txt-area .txt-box {margin-top: 40px;}
 .profile .txt-area .txt-box h4 {margin-bottom: 12px; font-size: 22px;}
-.profile .txt-area .txt-box p {position: relative; font-size: 18px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;  transition-delay: .1s}
-.profile .txt-area .txt-box p:last-child {margin-top: 16px; transition-delay: .2s;}
+.profile .txt-area .txt-box p {position: relative; font-size: 17px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;  transition-delay: .1s}
+.profile .txt-area .txt-box p:last-child {margin-top: 18px; transition-delay: .2s;}
+.profile h4 {font-family: "IBMPlexSansKRLight";}
 .profile .cont-wrap {display: flex; justify-content: center; margin-top: 120px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
 .profile .cont-wrap.active {transform: translateY(0); opacity: 1;}
 .profile .cont-wrap .left .pic {min-width: 380px; height: 380px; object-fit: cover; background: url("../public/kimjisoo.png") no-repeat center / cover; border-radius: 50%; }
 .profile .cont-wrap .right {margin-left: 80px; padding-top: 40px;}
-.profile .cont-wrap .right h4 {position: relative; margin-bottom: 14px; padding-bottom: 14px; font-size: 22px;}
+.profile .cont-wrap .right h4 {position: relative; margin-bottom: 14px; padding-bottom: 14px; font-size: 22px;;}
 .profile .cont-wrap .right h4::after { content: ""; display: block; position: absolute; bottom: 0; left: 0px; width: 30px; height: 1px; background:#1e9aff; }
 .profile .cont-wrap .right p{font-size: 16px; font-family: 'Noto Sans KR', sans-serif; margin-bottom: 18px;}
-.profile .cont-wrap .right p span {margin-right: 12px; font-weight: 700;}
+.profile .cont-wrap .right p span {margin-right: 16px; font-weight: 700;}
 
 .profile .box-wrap {display: flex; flex-wrap: wrap; justify-content: center; margin-top: 80px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
 .profile .box-wrap.active {transform: translateY(0); opacity: 1;}
@@ -191,7 +207,7 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 .skills .txt-area.active {transform: translateY(0); opacity: 1;}
 .skills .cont-area {margin-top: 40px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;} 
 .skills .cont-area.active {transform: translateY(0); opacity: 1;}
-.skills .title {font-size: 40px; text-align: center;}
+.skills .title {font-size: 40px; text-align: center; font-family: "IBMPlexSansKRLight";}
 .apexcharts-datalabels {
   position: absolute !important; right: 0 !important; transform: translateX(10px);
 }
@@ -200,7 +216,7 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 .projects-w {position: relative; background: linear-gradient(#ffffff, #e4e6fa) no-repeat}
 .project {padding: 180px 0 110px;}
 .project .title-box {margin-bottom: 80px; text-align: center; }
-.project .title-box .title {font-size: 42px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
+.project .title-box .title {font-size: 42px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s; font-family: "IBMPlexSansKRLight";}
 .project .title-box .title.active {transform: translateY(0); opacity: 1;}
 
 
@@ -211,8 +227,8 @@ footer .inner .copyright{color:#222; font-weight:500; text-align: center; font-s
 
 .project .box-w + .box-w {margin-top: 60px;}
 .project .box-w .txt-area {margin-bottom: 80px; text-align: center;}
-.project .box-w .txt-area .tit {font-size: 28px;}
-.project .box-w .txt-area .sub-tit {margin-top: 12px; font-size: 16px; color: #777;}
+.project .box-w .txt-area .tit {font-size: 28px; font-family: "IBMPlexSansKR";}
+.project .box-w .txt-area .sub-tit {margin-top: 12px; font-size: 16px; color: #555; font-family: "IBMPlexSansKRLight";}
 .project .cont-area {display: flex; }
 .project .cont-area .left .swiper {position: relative; padding-bottom: 60px; width: 400px; height: 570px;}
 
