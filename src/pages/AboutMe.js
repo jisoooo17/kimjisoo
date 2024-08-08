@@ -3,9 +3,30 @@ import { useNavigate } from 'react-router-dom';
 import ReactApexChart from 'react-apexcharts';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import {gsap} from "gsap";
+import { getScrollObjY, handleScroll } from "../components/ScrollMotion.js";
 
 const AboutMe = () => {
   let navigate = useNavigate();
+
+  // 페이지 로드 후 바로 실행되는 모션
+  useEffect(()=>{
+    document.querySelector(".profile .inner .txt").style.opacity =  1;
+    document.querySelector(".profile .inner .txt").style.transform = "translateY(0)";
+    document.querySelector(".profile .inner .txt-box p:nth-child(1)").style.opacity = 1;
+    document.querySelector(".profile .inner .txt-box p:nth-child(1)").style.transform = "translateY(0)";
+    document.querySelector(".profile .inner .txt-box p:nth-child(2)").style.opacity = 1;
+    document.querySelector(".profile .inner .txt-box p:nth-child(2)").style.transform = "translateY(0)";
+  });
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
 
   // ApexChart state
   const [chartState, setChartState] = useState({
@@ -87,17 +108,17 @@ const AboutMe = () => {
       <section className="profile">
         <div className="inner">
           <div className="txt-area">
-            <p className="txt">
+            <p className="txt ">
               프론트엔드 개발에 열정을 가지고 있으며, <br />
               데이터를 기반으로 사용자 경험을 개선하는 것을 목표로 하고 있습니다.
             </p>
             <div className="txt-box">
-              <p>기획자, 디자이너, 개발자와 협업을 통해 웹사이트 개발 프로세스를 이해하고 있으며, <br />커뮤니케이션과 협력 능력을 가지고 있습니다.</p>
+              <p>UI개발자로 근무한 경험이 있습니다. 기획자, 디자이너, 개발자와 협업을 통해 <br />웹사이트 개발 프로세스를 이해하고 있으며, 커뮤니케이션과 협력 능력을 가지고 있습니다.</p>
               <p>사용자 중심의 개발을 지향합니다. 웹 접근성 인증마크를 획득해본 경험이 있으며, <br />브라우저 호환성 테스트를 통해 사용자 경험을 고려하여 서비스를 개발한 경험이 있습니다.</p>
             </div>
           </div>
 
-          <div className="cont-wrap">
+          <div className="cont-wrap scroll-motion">
             <div className="left">
               <p className="pic"></p>
             </div>
@@ -115,7 +136,7 @@ const AboutMe = () => {
             </div>
           </div>
 
-          <div className="box-wrap">
+          <div className="box-wrap scroll-motion">
             <div className="box">
               <h4>CAREER</h4>
               <div className="txt-w">
@@ -145,16 +166,22 @@ const AboutMe = () => {
 
       <section className="skills">
         <div className="inner">
-          <div className="txt-area">
+          <div className="txt-area scroll-motion">
             <h3 className="title">SKILLS</h3>
           </div>
-          <div className="cont-area">
+          <div className="cont-area scroll-motion">
             <div>
               <ReactApexChart options={chartState.options} series={chartState.series} type="bar" height={600} />
             </div>
           </div>
         </div>
       </section>
+
+      <div className="btn-area">
+        <button className='btn-goto' onClick={()=>{navigate("/projects")}}>
+          <span>프로젝트 보러가기</span>
+        </button>
+      </div>
 
       <Footer/>
     </div>

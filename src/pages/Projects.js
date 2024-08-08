@@ -22,6 +22,7 @@ const Projects = () => {
      setActiveIndex(prevIndex => (prevIndex === index ? null : index));
    };
   
+   let navigate = useNavigate();
 
   return (
     <div className='projects-w'>
@@ -241,6 +242,12 @@ const Projects = () => {
           </div>
         </div>
       </section>
+
+      <div className="btn-area">
+        <button className='btn-goto' onClick={()=>{navigate("/aboutme")}}>
+          <span>프로필 보러가기</span>
+        </button>
+      </div>
 
       <Footer/>
     </div>
