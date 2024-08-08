@@ -124,7 +124,11 @@ const AboutMe = () => {
 
           <div className="cont-wrap scroll-motion">
             <div className="left">
-              <p className="pic"></p>
+              <p className="pic">
+              <img src={process.env.PUBLIC_URL + 'img/kimjisoo.png'} alt="" />
+
+
+              </p>
             </div>
 
             <div className="right">

@@ -112,12 +112,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 
 
 .App{position:relative; width:100%; overflow:hidden;}
-body { font-family: "Noto Sans KR"; line-height: 28px; position: relative;;}
-.inner {margin: 0 auto; width: 1080px;}
+.inner {margin: 0 auto; width: 1024px;}
+body p {font-family: "Noto Sans KR"; line-height: 28px;}
 
 header {position: fixed; left: 0; top: 0; width: 100%; height: 62px; background: #fff; z-index: 3; box-shadow: 0 4px 16px 2px #00000010, 0 10px 15px 1px #19000000; background-color: #fff; transition: top .6s ease, background-color .6s ease; z-index: 10;}
-
-
 header.hide {top: -62px;}
 header h1 {position: absolute; bottom: 10px; left: 40px;}
 header h1 button span {font-family: "Caveat"; font-size: 32px;}
@@ -174,32 +172,35 @@ footer .inner .copyright{color:#777; font-weight:500; text-align: center; font-s
 .profile .inner .txt {font-size: 22px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
 .profile .inner .txt.active {transform: translateY(0); opacity: 1;}
 .profile .txt-area {text-align: center;}
-.profile .txt-area .txt-box {margin-top: 40px;}
+.profile .txt-area .txt-box {margin-top: 60px;}
 .profile .txt-area .txt-box h4 {margin-bottom: 12px; font-size: 22px;}
 .profile .txt-area .txt-box p {position: relative; font-size: 17px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;  transition-delay: .1s}
-.profile .txt-area .txt-box p:last-child {margin-top: 18px; transition-delay: .2s;}
+.profile .txt-area .txt-box p:last-child {margin-top: 24px; transition-delay: .2s;}
 .profile h4 {font-family: "IBMPlexSansKRLight";}
 .profile .cont-wrap {display: flex; justify-content: center; margin-top: 120px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
 .profile .cont-wrap.active {transform: translateY(0); opacity: 1;}
-.profile .cont-wrap .left .pic {min-width: 380px; height: 380px; object-fit: cover; background: url("../public/kimjisoo.png") no-repeat center / cover; border-radius: 50%; }
+.profile .cont-wrap .left .pic {min-width: 380px; height: 380px; object-fit: cover; /*background: url("../public/kimjisoo.png") no-repeat center / cover; */border-radius: 50%; }
+.profile .cont-wrap .left .pic img {width: 100%; height: 100%;}
 .profile .cont-wrap .right {margin-left: 80px; padding-top: 40px;}
 .profile .cont-wrap .right h4 {position: relative; margin-bottom: 14px; padding-bottom: 14px; font-size: 22px;;}
 .profile .cont-wrap .right h4::after { content: ""; display: block; position: absolute; bottom: 0; left: 0px; width: 30px; height: 1px; background:#1e9aff; }
 .profile .cont-wrap .right p{font-size: 16px; font-family: 'Noto Sans KR', sans-serif; margin-bottom: 18px;}
-.profile .cont-wrap .right p span {margin-right: 16px; font-weight: 700;}
+.profile .cont-wrap .right p span {margin-right: 22px;}
 
 .profile .box-wrap {display: flex; flex-wrap: wrap; justify-content: center; margin-top: 80px; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
 .profile .box-wrap.active {transform: translateY(0); opacity: 1;}
-.profile .box-wrap .box {margin-bottom: 40px; }
+/* .profile .box-wrap .box {margin-bottom: 40px; } */
 .profile .box-wrap .box:last-child {margin-left: 140px;}
 /* .profile .box-wrap .box:nth-child(n+4):nth-child(-n+5){margin-top: 60px;} */
 .profile .box-wrap h4 {position: relative; margin-bottom: 14px; padding-bottom: 14px; font-size: 22px;}
 .profile .box-wrap h4::after { content: ""; display: block; position: absolute; bottom: 0; left: 0px; width: 30px; height: 1px; background: rgb(73, 176, 180); }
 .profile .box-wrap p {font-size: 16px; font-family: 'Noto Sans KR', sans-serif; margin-bottom: 18px;}
-.profile .box-wrap p span {margin-right: 12px; font-weight: 700;}
+.profile .box-wrap p span {margin-right: 12px;;}
 .profile .box-wrap .indent {position: relative; margin-left: 10px; padding-left: 10px;}
 .profile .box-wrap .indent::after {content: ''; display: block; position: absolute; left: 0; top: 11px; width: 3px; height: 3px; border-radius: 50%; background-color: #1f1b1c;}
 .profile .box-wrap p .peri {margin-right: 14px; font-weight: 300; font-size: 14px;}
+
+
 
 
 .skills {padding: 180px 0 70px; background-color: #fff;}
@@ -211,6 +212,73 @@ footer .inner .copyright{color:#777; font-weight:500; text-align: center; font-s
 .apexcharts-datalabels {
   position: absolute !important; right: 0 !important; transform: translateX(10px);
 }
+
+@media screen and (max-width:1023px){
+  .inner {width: -webkit-calc(100% - 48px); width: calc(100% - 48px)}
+}
+
+
+@media screen and (max-width: 829px) {
+  body p {line-height: 24px;}
+  
+  .btn-area {padding: 0 0 110px; text-align: center;}
+  .btn-area .btn-goto {padding: 12px 22px; border: 1px solid #d8d8d8; background-color: #fff; color: #777; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
+  .btn-area .btn-goto.active {transform: translateY(0); opacity: 1;}
+  .btn-area .btn-goto span{position:relative; font-size: 16px; font-weight: 100; }
+
+  /* -------------- about me -------------- */
+  .profile .inner {padding: 160px 0px 120px; }
+  .profile .inner .txt {font-size: 18px; }
+  
+  .profile .txt-area .txt-box {margin-top: 40px; padding: 0 40px;}
+  .profile .txt-area .txt-box p {font-size: 16px;}
+  .profile .cont-wrap {margin-top: 80px; padding: 0 20px;}
+  .profile .cont-wrap .left .pic {min-width: 240px; height: 240px;}
+  .profile .cont-wrap .right {margin-left: 60px; padding-top: 0;}
+  .profile .cont-wrap .right h4 {font-size: 20px;}
+  .profile .cont-wrap .right p {margin-bottom: 20px;}
+  /* .profile .cont-wrap .right p span {display: block; margin-bottom: 8px;} */
+  
+  .profile .box-wrap {flex-wrap: nowrap; padding: 0 20px;}
+  .profile .box-wrap .box:last-child {margin-left: 60px;}
+  .profile .box-wrap h4 {font-size: 20px;}
+  .profile .box-wrap p {font-size: 14px; margin-bottom: 20px;}
+  .profile .box-wrap p:last-child {margin-bottom: 0;}
+  .profile .box-wrap p .peri {display: block; margin-bottom: 8px;}
+
+
+  .skills {padding: 120px 0 70px;}
+  .skills .title {font-size: 32px;}
+}
+
+@media screen and (max-width: 699px) {
+  .profile .cont-wrap .left .pic {min-width: 180px; height: 180px;}
+
+  .profile .cont-wrap .right p span {display: block; margin-bottom: 8px; font-size: 14px;}
+}
+
+@media screen and (max-width: 539px) {
+  .btn-area {padding: 0 0 80px;}
+  .btn-area .btn-goto span {font-size: 14px;}
+
+  .profile .inner {padding: 160px 0px 60px;}
+  .profile .inner .txt {font-size: 16px;}
+  .profile .txt-area .txt-box {padding: 0 20px;}
+  .profile .txt-area .txt-box p {font-size: 14px; line-height: 22px;}
+  .profile .cont-wrap {display: block;}
+  .profile .cont-wrap .left .pic {width: 100%; height: auto;}
+  .profile .cont-wrap .right {margin-top: 60px; margin-left: 0;}
+  .profile .cont-wrap .right p {font-size: 14px;}
+  .profile .cont-wrap .right p span {margin-bottom: 4px; font-size: 13px; color: #555;}
+  .profile .box-wrap {display: block;}
+  .profile .box-wrap .box {margin-bottom: 80px;}
+  .profile .box-wrap .box:last-child {margin-left: 0;}
+  .profile .box-wrap p .peri {margin-bottom: 4px; font-size: 13px; color: #555;}
+
+  .skills {padding: 120px 0 40px;}
+} 
+
+
 
 /* -------------- project -------------- */
 .projects-w {position: relative; background: linear-gradient(#ffffff, #e4e6fa) no-repeat}
