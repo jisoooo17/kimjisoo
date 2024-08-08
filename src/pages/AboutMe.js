@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import ReactApexChart from 'react-apexcharts';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import {gsap} from "gsap";
-import { getScrollObjY, handleScroll } from "../components/ScrollMotion.js";
+import { handleScroll } from "../components/ScrollMotion.js";
 
 const AboutMe = () => {
   let navigate = useNavigate();
@@ -19,6 +18,7 @@ const AboutMe = () => {
     document.querySelector(".profile .inner .txt-box p:nth-child(2)").style.transform = "translateY(0)";
   });
 
+  // 스크롤 모션
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -28,7 +28,7 @@ const AboutMe = () => {
   }, []);
 
 
-  // ApexChart state
+  // 스킬 차트
   const [chartState, setChartState] = useState({
     series: [{
       data: [90, 90, 40, 60, 70, 60, 40, 40, 50, 70]
@@ -101,6 +101,10 @@ const AboutMe = () => {
     }
   });
 
+  // 페이지 진입 시 스크롤탑 이동
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
   return (
     <div className="aboutme-w">
       <Header/>
@@ -178,7 +182,7 @@ const AboutMe = () => {
       </section>
 
       <div className="btn-area">
-        <button className='btn-goto' onClick={()=>{navigate("/projects")}}>
+        <button className='btn-goto scroll-motion' onClick={()=>{navigate("/projects")}}>
           <span>프로젝트 보러가기</span>
         </button>
       </div>

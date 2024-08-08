@@ -44,11 +44,11 @@ const Header = () => {
   return (
     <header className="header">
       <h1>
-        <button onClick={() => { navigate("/") }}>Kim Jisoo</button>
+        <button onClick={() => { navigate("/") }}><span>Kim Jisoo</span></button>
       </h1>
       <div className="utils">
-        <button onClick={() => { navigate("/aboutme") }}>ABOUT ME</button>
-        <button onClick={() => { navigate("/projects") }}>PROJECTS</button>
+        <button onClick={() => { navigate("/aboutme") }}><span>ABOUT ME</span></button>
+        <button onClick={() => { navigate("/projects") }}><span>PROJECTS</span></button>
       </div>
     </header>
   );
