@@ -54,7 +54,7 @@ const Projects = () => {
             <div className="box-w scroll-motion">
               <div className="txt-area">
                 <p className="tit">BBANG끗</p>
-                <p className="sub-tit">3인 팀프로젝트(2024-02-16 ~ 2024-03-15)</p>
+                <p className="sub-tit">3인 팀프로젝트<span>(2024-02-16 ~ 2024-03-15)</span></p>
               </div>
               <div className="cont-area">
                 <div className="left">
@@ -203,7 +203,7 @@ const Projects = () => {
             <div className="box-w shop scroll-motion">
               <div className="txt-area">
                 <p className="tit">Shoe Shop</p>
-                <p className="sub-tit">1인 프로젝트(2024-07-16 ~ 2024-07-24)</p>
+                <p className="sub-tit">1인 프로젝트<span>(2024-07-16 ~ 2024-07-24)</span></p>
               </div>
               <div className="cont-area">
                 <div className="left">

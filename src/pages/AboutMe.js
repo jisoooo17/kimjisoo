@@ -97,7 +97,57 @@ const AboutMe = () => {
             colors: ['#333'] // y축 레이블의 색상
           }
         },
-      }
+      },
+      responsive: [
+        {
+          breakpoint: 829, // 화면 크기 829px 이하일 때
+          options: {
+            chart: {
+              height: 500, // 차트 높이 조정
+            },
+            yaxis: {
+              labels: {
+                style: {
+                  fontSize: '14px', 
+                }
+              },
+            },
+            
+            dataLabels: {
+              style: {
+                fontSize: '12px', 
+              }
+            }
+          }
+        },
+        {
+          breakpoint: 539, 
+          options: {
+            chart: {
+              height: 400,
+            },
+            yaxis: {
+              labels: {
+                style: {
+                  fontSize: '12px', 
+                }
+              },
+            },
+            xaxis: {
+              labels: {
+                style: {
+                  fontSize: '10px',
+                }
+              },
+            },
+            dataLabels: {
+              style: {
+                fontSize: '10px', 
+              }
+            }
+          }
+        }
+      ]
     }
   });
 
