@@ -175,9 +175,7 @@ const AboutMe = () => {
           <div className="cont-wrap scroll-motion">
             <div className="left">
               <p className="pic">
-              <img src={process.env.PUBLIC_URL + 'img/kimjisoo.png'} alt="" />
-
-
+                <img src={process.env.PUBLIC_URL + 'img/kimjisoo.png'} alt="" />
               </p>
             </div>
 
@@ -222,7 +220,26 @@ const AboutMe = () => {
         </div>
       </section>
 
-      <section className="skills">
+      <section className="experience aboutme">
+        <div className="inner">
+          <div className="txt-area scroll-motion">
+            <h3 className="title">EXPERIENCE</h3>
+          </div>
+          <div className="cont-area flex-w scroll-motion">
+          <div className="left">
+              <p className="tit">K-디지털 트레이닝 풀스택 개발</p>
+              <p className="sub-tit">이젠아카데미컴퓨터학원</p>
+              <p className="peri">2023.10 ~ 2024.04</p>
+            </div>
+            <div className="right">
+              <p className="txt">React, Node.js, MySQL, Python을 주로 학습하며 프로그래밍의 기본, 알고리즘, 데이터 처리 등을 실습했으며 프로젝트에 적용했습니다.</p>
+              <p className="txt">최종 프로젝트에서 팀의 리더를 맡아, 프론트엔드를 React를 기반으로 작업하였으며 Node.js로 백엔드의 일부 기능을 개발했습니다. 또한, MySQL을 활용하여 데이터베이스 설계와 서버의 원격 데이터 처리를 수행하여 데이터를 전송 및 관리했습니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="skills aboutme">
         <div className="inner">
           <div className="txt-area scroll-motion">
             <h3 className="title">SKILLS</h3>
