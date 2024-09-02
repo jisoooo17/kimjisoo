@@ -132,6 +132,7 @@ footer{padding:20px 0; border-top:1px solid #eee; background-color: #fff;}
 footer .inner .copyright{color:#777; font-weight:500; text-align: center; font-size: 12px;}
 
 .btn-area {display: flex; justify-content: center; padding: 0 0 110px; text-align: center; background-color: #f1f1f1;}
+.projects-w .btn-area {background-color: transparent;}
 .btn-area .btn-goto {display: flex; justify-content: center; align-items: center; padding: 12px 22px; border: 1px solid #d8d8d8; background-color: #fff; color: #777; transform: translateY(80px); opacity: 0; transition: opacity .8s, transform .8s;}
 .btn-area .btn-goto.active {transform: translateY(0); opacity: 1;}
 .btn-area .btn-goto span{position:relative; font-size: 16px; font-weight: 100; }

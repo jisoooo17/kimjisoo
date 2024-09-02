@@ -163,7 +163,7 @@ const AboutMe = () => {
         <div className="inner">
           <div className="txt-area">
             <p className="txt ">
-              프론트엔드 개발에 열정을 가지고 있으며, <br />
+              개발에 열정을 가지고 있으며, <br />
               데이터를 기반으로 사용자 경험을 개선하는 것을 목표로 하고 있습니다.
             </p>
             <div className="txt-box">
