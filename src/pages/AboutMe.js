@@ -16,6 +16,8 @@ const AboutMe = () => {
     document.querySelector(".profile .inner .txt-box p:nth-child(1)").style.transform = "translateY(0)";
     document.querySelector(".profile .inner .txt-box p:nth-child(2)").style.opacity = 1;
     document.querySelector(".profile .inner .txt-box p:nth-child(2)").style.transform = "translateY(0)";
+    document.querySelector(".profile .cont-wrap").style.opacity = 1;
+    document.querySelector(".profile .cont-wrap").style.transform = "translateY(0)";
   });
 
   // 스크롤 모션
@@ -172,7 +174,7 @@ const AboutMe = () => {
             </div>
           </div>
 
-          <div className="cont-wrap scroll-motion">
+          <div className="cont-wrap">
             <div className="left">
               <p className="pic">
                 <img src={process.env.PUBLIC_URL + 'img/kimjisoo.png'} alt="" />
